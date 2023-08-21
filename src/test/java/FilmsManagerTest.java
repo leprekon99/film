@@ -90,4 +90,21 @@ public class FilmsManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void SevenTest() {
+        FilmsManager manager = new FilmsManager();
+
+        manager.addFilm("Бладшот I");
+        manager.addFilm("Вперед II");
+        manager.addFilm("Отель Белград III");
+        manager.addFilm("Джентельмены IV");
+        manager.addFilm("Человек-неведимка V");
+        manager.addFilm("Тролли.Мировой тур VI");
+        manager.addFilm("Номер один VII");
+
+        String[] actual = manager.findLast();
+        String[] expected = {"Номер один VII", "Тролли.Мировой тур VI", "Человек-неведимка V", "Джентельмены IV", "Отель Белград III", "Вперед II", "Бладшот I"};
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
